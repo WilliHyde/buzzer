@@ -1,0 +1,11 @@
+audio {
+	width: 100%;
+}
+.btn.btn-buzz {
+	margin-top: 40px;
+	font-size: 60px;
+}
+.btn.btn-buzz:empty, 
+.flash-text:empty {
+	display: none;
+}
