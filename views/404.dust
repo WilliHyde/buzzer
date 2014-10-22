@@ -3,5 +3,5 @@
 {<title}404{/title}
 
 {<html_body}
-	<p>404'd!</p>
+	<div class="alert alert-danger">404'd!</div>
 {/html_body}

@@ -5,10 +5,15 @@
 
 {<html_body}
 	{?user}
-    	<h3>Player: {user} (<a href="/logout">logout</a>)</h3>
-    {:else}
-   		<h3>Not logged in! Try <a href="?">refreshing</a> or <a href="/logout">logging out</a></h3>
-   	{/user}
-    <div id="first"></div>
-    <a href="#" id="buzz">Buzz!</a>
+		<div class="alert alert-info">Player: <strong>{user}</strong> (<a href="/logout">logout</a>)</div>
+	{:else}
+		<h3>Not logged in! Try <a href="?">refreshing</a> or <a href="/logout">logging out</a></h3>
+	{/user}
+
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<span class="btn btn-warning btn-block btn-buzz disabled" id="first"></span>
+			<a href="#" class="btn btn-success btn-block btn-buzz" id="buzz">Buzz!</a>
+		</div>
+	</div>
 {/html_body}

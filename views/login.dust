@@ -3,10 +3,18 @@
 {<title}Login{/title}
 
 {<html_body}
-	<p>Pick a display name!</p>
-	<form method="post">
+	<form class="form-horizontal" role="form" method="post">
 		<input type="hidden" name="next" value="{next}" />
-		<input type="text" name="user" />
-		<input type="submit" value="Login" />
+		<div class="form-group form-group-lg">
+			<label class="col-sm-3 control-label" for="loginPls">Pick your name!</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="text" name="user" id="loginPls" placeholder="Nerf Herder">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-9">
+				<button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+			</div>
+		</div>
 	</form>
 {/html_body}

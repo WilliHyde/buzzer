@@ -3,124 +3,173 @@
 {<title}Host Home {title}{/title}
 
 
-{<col1}
-	<h3 class="buzzer">First Buzzer: <span id="first"></span></h3>
+{<html_body}
 
-	<table class="changePoints round1">
-		<tr>
-			<td colspan="2">
-				Round: One &middot; <a  class="changeRound" data-round="2" href="#">Two</a>
-			</td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="100" href="#">100</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-100" href="#">100</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="200" href="#">200</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-200" href="#">200</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="300" href="#">300</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-300" href="#">300</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="400" href="#">400</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-400" href="#">400</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="500" href="#">500</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-500" href="#">500</a></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<h5>Custom Change</h5>
-				<input type="text" class="customPts">
-				<a class="customPtBtn add" href="#">+</a>
-				<a class="customPtBtn sub" href="#">-</a>
-			</td>
-		</tr>
-	</table>
-	<table class="changePoints round2 hide">
-		<tr>
-			<td colspan="2">
-				Round: <a class="changeRound" data-round="1" href="#">One</a> &middot; Two
-			</td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="200" href="#">200</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-200" href="#">200</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="400" href="#">400</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-400" href="#">400</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="600" href="#">600</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-600" href="#">600</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="800" href="#">800</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-800" href="#">800</a></td>
-		</tr>
-		<tr>
-			<td><a class="presetPtBtn add" data-amount="1000" href="#">1000</a></td>
-			<td><a class="presetPtBtn sub" data-amount="-1000" href="#">1000</a></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<h5>Custom Change</h5>
-				<input type="text" class="customPts">
-				<a class="customPtBtn add" href="#">+</a>
-				<a class="customPtBtn sub" href="#">-</a>
-			</td>
-		</tr>
-	</table>
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="alert alert-info">First Buzzer: <strong id="first"></strong></div>
+		</div>
+		<div class="col-sm-4">
+			<a href="#" class="btn btn-lg btn-block btn-info" id="reset">Reset Buzzers</a>
+		</div>
+	</div>
+		
+	<hr>
 
-	<a href="#" id="reset">Reset Buzzers</a>
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<table class="table table-striped scoreboard">
+				<tr>
+					<th>Name</th>
+					<th>Points</th>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4 col-sm-6 changePoints round1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Round #</h3>
+				</div>
+				<div class="panel-body">
+					<div class="btn-group btn-group-justified">
+						<span class="btn btn-default active">One</span>
+						<a class="changeRound btn btn-default" data-round="2" href="#">Two</a>
+					</div>
+				</div>
+			</div>
 
-	{/col1}
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Points +/-</h3>
+				</div>
+				<div class="panel-body">
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-100" href="#"><span class="glyphicon glyphicon-minus"></span> 100</a>
+						<a class="presetPtBtn btn btn-success" data-amount="100" href="#"><span class="glyphicon glyphicon-plus"></span> 100</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-200" href="#"><span class="glyphicon glyphicon-minus"></span> 200</a>
+						<a class="presetPtBtn btn btn-success" data-amount="200" href="#"><span class="glyphicon glyphicon-plus"></span> 200</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-300" href="#"><span class="glyphicon glyphicon-minus"></span> 300</a>
+						<a class="presetPtBtn btn btn-success" data-amount="300" href="#"><span class="glyphicon glyphicon-plus"></span> 300</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-400" href="#"><span class="glyphicon glyphicon-minus"></span> 400</a>
+						<a class="presetPtBtn btn btn-success" data-amount="400" href="#"><span class="glyphicon glyphicon-plus"></span> 400</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-500" href="#"><span class="glyphicon glyphicon-minus"></span> 500</a>
+						<a class="presetPtBtn btn btn-success" data-amount="500" href="#"><span class="glyphicon glyphicon-plus"></span> 500</a>
+					</div>
+					<hr>
+					<form class="form-inline" role="form">
+						<div class="form-group">
+							<label class="sr-only" for="customAmount1">Custom amount</label>
+							<input class="form-control customPts" id="customAmount1" type="text" placeholder="Enter amount">
+						</div>
+						<div class="btn-group">
+							<a class="customPtBtn btn btn-danger" href="#"><span class="glyphicon glyphicon-minus"></span></a>
+							<a class="customPtBtn btn btn-success" href="#"><span class="glyphicon glyphicon-plus"></span></a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 changePoints round2 hide">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Round #</h3>
+				</div>
+				<div class="panel-body">
+					<div class="btn-group btn-group-justified">
+						<a class="changeRound btn btn-default" data-round="1" href="#">One</a>
+						<span class="btn btn-default active">Two</span>
+					</div>
+				</div>
+			</div>
 
-	{<col2}
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Points +/-</h3>
+				</div>
+				<div class="panel-body">
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-200" href="#"><span class="glyphicon glyphicon-minus"></span> 200</a>
+						<a class="presetPtBtn btn btn-success" data-amount="200" href="#"><span class="glyphicon glyphicon-plus"></span> 200</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-400" href="#"><span class="glyphicon glyphicon-minus"></span> 400</a>
+						<a class="presetPtBtn btn btn-success" data-amount="400" href="#"><span class="glyphicon glyphicon-plus"></span> 400</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-600" href="#"><span class="glyphicon glyphicon-minus"></span> 600</a>
+						<a class="presetPtBtn btn btn-success" data-amount="600" href="#"><span class="glyphicon glyphicon-plus"></span> 600</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-800" href="#"><span class="glyphicon glyphicon-minus"></span> 800</a>
+						<a class="presetPtBtn btn btn-success" data-amount="800" href="#"><span class="glyphicon glyphicon-plus"></span> 800</a>
+					</div>
+					<br>
+					<div class="btn-group btn-group-justified">
+						<a class="presetPtBtn btn btn-danger" data-amount="-1000" href="#"><span class="glyphicon glyphicon-minus"></span> 1000</a>
+						<a class="presetPtBtn btn btn-success" data-amount="1000" href="#"><span class="glyphicon glyphicon-plus"></span> 1000</a>
+					</div>
+					<hr>
+					<form class="form-inline" role="form">
+						<div class="form-group">
+							<label class="sr-only" for="customAmount2">Custom amount</label>
+							<input class="form-control customPts" id="customAmount2" type="text" placeholder="Enter amount">
+						</div>
+						<div class="btn-group">
+							<a class="customPtBtn btn btn-danger" href="#"><span class="glyphicon glyphicon-minus"></span></a>
+							<a class="customPtBtn btn btn-success" href="#"><span class="glyphicon glyphicon-plus"></span></a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Music <span class="glyphicon glyphicon-music"></span></h3>
+				</div>
+				<div class="panel-body">
+					<h4>Intro</h4>
+					<audio controls preload="auto">
+						<source src="../audio/intro.mp3" type="audio/mpeg">Your browser does not support the audio element.
+					</audio><hr>
 
-	<table class="scoreboard">
-		<tr>
-			<th>Name</th>
-			<th>Points</th>
-		</tr>
-	</table>
+					<h4>Board</h4>
+					<audio controls preload="auto">
+						<source src="../audio/board.mp3" type="audio/mpeg">Your browser does not support the audio element.
+					</audio><hr>
 
-	<h4>Music<h4>
-	<ul>
-		<li>
-			Intro<br />
-			<audio controls preload="auto">
-				<source src="../audio/intro.mp3" type="audio/mpeg">Your browser does not support the audio element.
-			</audio>
-		</li>
-		<li>
-			Board<br />
-			<audio controls preload="auto">
-				<source src="../audio/board.mp3" type="audio/mpeg">Your browser does not support the audio element.
-			</audio>
-		</li>
-		<li>
-			Daily Double<br />
-			<audio controls preload="auto">
-				<source src="../audio/dailydouble.mp3" type="audio/mpeg">Your browser does not support the audio element.
-			</audio>
-		</li>
-		<li>
-			Out of Time<br />
-			<audio controls preload="auto">
-				<source src="../audio/outoftime.mp3" type="audio/mpeg">Your browser does not support the audio element.
-			</audio>
-		</li>
-		<li>
-			Thinking Music<br />
-			<audio controls preload="auto">
-				<source src="../audio/thinking.mp3" type="audio/mpeg">Your browser does not support the audio element.
-			</audio>
-		</li>
-	</ul>
-{/col2}
+					<h4>Daily Double</h4>
+					<audio controls preload="auto">
+						<source src="../audio/dailydouble.mp3" type="audio/mpeg">Your browser does not support the audio element.
+					</audio><hr>
+
+					<h4>Out of Time</h4>
+					<audio controls preload="auto">
+						<source src="../audio/outoftime.mp3" type="audio/mpeg">Your browser does not support the audio element.
+					</audio><hr>
+
+					<h4>Thinking Music</h4>
+					<audio controls preload="auto">
+						<source src="../audio/thinking.mp3" type="audio/mpeg">Your browser does not support the audio element.
+					</audio>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+{/html_body}
